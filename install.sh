@@ -6,6 +6,7 @@
 #   --project D  install into D/.agents/skills (Cursor + Codex) and D/.claude/skills if D/.claude exists
 #   --all-targets  create ~/.agents/skills and ~/.claude/skills if missing
 #   --copy       copy instead of symlink
+# Example: ./install.sh math-writing-notation-economy decision-records
 # Existing entries with the same name are left untouched unless they are our symlinks.
 set -euo pipefail
 SRC="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/skills"
