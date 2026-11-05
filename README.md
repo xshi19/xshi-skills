@@ -12,7 +12,7 @@ Agent skills by Xiang Shi ([@xshi19](https://github.com/xshi19)) for mathematica
 
 | Skill | Use it when |
 |---|---|
-| [`notation-economy`](skills/notation-economy/SKILL.md) | Finalizing math exposition: audit the reader-facing draft and cut auxiliary symbols and aliases that do not earn their place, without losing any fact. Includes an optional report-only audit script (`scripts/notation_audit.py`, Python 3, stdlib only). |
+| [`math-notation`](skills/math-notation/SKILL.md) | Finalizing reader-facing math exposition: audit notation, case reductions, and transformed symbols. Includes an optional [report-only audit script](skills/math-notation/scripts/notation_audit.py) (Python 3, stdlib only). |
 
 ### Decision records
 
@@ -49,7 +49,7 @@ Some skills mention optional companions from [pstack](https://cursor.com/marketp
 git clone https://github.com/xshi19/xshi-skills.git
 cd xshi-skills
 ./install.sh                         # all skills, user level
-./install.sh notation-economy decision-records   # only some skills
+./install.sh math-notation decision-records   # only some skills
 ./install.sh --project /path/to/repo # project level (.agents/skills)
 ./install.sh --copy                  # copy instead of symlink
 ```
@@ -67,7 +67,7 @@ Symlinks keep skills updated with `git pull`. Use `--copy` if a tool or sync set
 Cursor loads skills from `~/.agents/skills/`, `~/.cursor/skills/` (user) and `.agents/skills/`, `.cursor/skills/` (project). It also reads `~/.claude/skills/` and `~/.codex/skills/` for compatibility.
 
 ```bash
-ln -s "$PWD/skills/notation-economy" ~/.cursor/skills/notation-economy        # user level
+ln -s "$PWD/skills/math-notation" ~/.cursor/skills/math-notation   # user level
 mkdir -p .cursor/skills && cp -R /path/to/xshi-skills/skills/decision-records .cursor/skills/   # project level
 ```
 
@@ -80,7 +80,7 @@ Codex scans `.agents/skills` from the current directory up to the repository roo
 ```bash
 mkdir -p ~/.agents/skills
 ln -s "$PWD/skills/decision-records" ~/.agents/skills/decision-records       # user level
-mkdir -p .agents/skills && cp -R /path/to/xshi-skills/skills/notation-economy .agents/skills/   # project level
+mkdir -p .agents/skills && cp -R /path/to/xshi-skills/skills/math-notation .agents/skills/   # project level
 ```
 
 Run `/skills` or type `$` to mention a skill. Restart Codex if a new skill does not appear. Older Codex builds read `~/.codex/skills`; link there too if you use one.
@@ -115,7 +115,7 @@ skills/<skill-name>/
 
 Xiang Shi（[@xshi19](https://github.com/xshi19)）编写的 Agent Skills：数学写作、工程决策记录（ADR）、科学计算/数值方法。每个 skill 是 `skills/<名称>/SKILL.md`，遵循开放的 Agent Skills 格式，**Cursor、Codex、Claude Code** 都能加载。
 
-- **数学写作**：`notation-economy`，定稿时审查符号，删掉不必要的辅助符号和别名，不丢任何数学事实。
+- **数学写作**：[`math-notation`](skills/math-notation/SKILL.md)，定稿时审查符号、情形归约与变换后的记号。
 - **决策记录**：`decision-records`，记录重要技术决策及备选方案，改设计前先查已有决策。
 - **Science stack**：7 条数值设计原则 + `benchmarking`、`mutation-testing`、`numerical-review`。原则类与 benchmarking 需要显式调用（Cursor/Claude Code 用 `/名称`，Codex 用 `$名称`）。
 
@@ -124,7 +124,7 @@ Xiang Shi（[@xshi19](https://github.com/xshi19)）编写的 Agent Skills：数�
 ```bash
 git clone https://github.com/xshi19/xshi-skills.git && cd xshi-skills
 ./install.sh                 # 全部安装到用户目录
-./install.sh decision-records   # 只装部分
+./install.sh math-notation decision-records   # 只装部分
 ./install.sh --project 仓库路径  # 装到项目的 .agents/skills
 ```
 

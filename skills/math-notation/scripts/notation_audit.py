@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Report candidate notation introductions and later math-token occurrences.
 
-Usage: python3 notation_audit.py path/to/page.md
+From the repository root:
+    python3 skills/math-notation/scripts/notation_audit.py path/to/page.md
 Accepts files or directories (recursively scans *.md). Findings always exit 0;
 invalid inputs exit nonzero. No writes, dependencies, or build integration.
 
