@@ -1,9 +1,9 @@
 ---
-name: math-writing-notation-economy
-description: "Use when finalizing mathematical exposition: audit symbols, case reductions, and notation after transformations while preserving the full claim. Not for scratch work or unfinished derivations."
+name: math-notation
+description: "Use when finalizing notation in mathematical writing: audit symbols, case reductions, and notation after transformations while preserving the full claim. Not for scratch work or unfinished derivations."
 ---
 
-# Math-writing notation economy
+# Math notation
 
 Apply to the **final draft** of math exposition, after claims and proofs have settled. Scratch work and intermediate derivations may use any helpful notation. Audit only what the reader will see.
 

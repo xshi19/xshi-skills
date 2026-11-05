@@ -2,7 +2,7 @@
 """Report candidate notation introductions and later math-token occurrences.
 
 From the repository root:
-    python3 skills/math-writing-notation-economy/scripts/notation_audit.py path/to/page.md
+    python3 skills/math-notation/scripts/notation_audit.py path/to/page.md
 Accepts files or directories (recursively scans *.md). Findings always exit 0;
 invalid inputs exit nonzero. No writes, dependencies, or build integration.
 
