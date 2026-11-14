@@ -13,6 +13,7 @@ Agent skills by Xiang Shi ([@xshi19](https://github.com/xshi19)) for mathematica
 | Skill | Use it when |
 |---|---|
 | [`math-notation`](skills/math-notation/SKILL.md) | Finalizing reader-facing math exposition: audit notation, case reductions, and transformed symbols. Includes an optional [report-only audit script](skills/math-notation/scripts/notation_audit.py) (Python 3, stdlib only). |
+| [`statement-before-proof`](skills/statement-before-proof/SKILL.md) | Stating precise, numbered or named mathematical claims before their proofs or derivations, with remarks afterward. |
 
 ### Decision records
 
