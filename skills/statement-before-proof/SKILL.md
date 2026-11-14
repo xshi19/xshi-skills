@@ -1,6 +1,7 @@
 ---
 name: statement-before-proof
-description: "Use when drafting or reviewing mathematical proofs, derivations of formal claims, or cited results proved on the page: state the precise claim before its proof. Not for pure definitions, citation-only results, or informal motivation."
+description: "State a precise numbered or named theorem, proposition, lemma, or corollary before its proof, and put remarks after the proof. Use when drafting or reviewing a proof, a formal derivation, or a cited result that is proved on the page. Not for pure definitions, citation-only results, or informal motivation."
+license: MIT
 ---
 
 # Statement before proof

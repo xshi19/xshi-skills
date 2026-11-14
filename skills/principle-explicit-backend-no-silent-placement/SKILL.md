@@ -1,6 +1,7 @@
 ---
 name: principle-explicit-backend-no-silent-placement
-description: "Use when changing numerical backends, execution placement, fallbacks, or transformation support."
+description: "Treat device placement and transformation support as part of the numerical API, and make any fallback an explicit policy. Use when changing a numerical backend, device or GPU placement, a host fallback, or support for JIT or autodiff."
+license: MIT
 disable-model-invocation: true
 ---
 

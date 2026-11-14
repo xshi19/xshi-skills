@@ -1,6 +1,7 @@
 ---
 name: benchmarking
-description: "Use when measuring numerical speedups, regressions, or implementation tradeoffs."
+description: "Compare numerical implementations with the accuracy, failure, and placement contracts fixed, both sides tuned, and the sample spread reported. Use when measuring a speedup, a performance regression, or an implementation tradeoff, including timings on JAX or PyTorch CUDA."
+license: MIT
 disable-model-invocation: true
 ---
 

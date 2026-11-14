@@ -1,6 +1,7 @@
 ---
 name: principle-fail-loud-on-invalid-domain
-description: "Use when handling invalid parameters, failed solves, infinities, clamps, or numerical thresholds."
+description: "Reject invalid requests and surface numerical failure. A clamp or a substituted finite value hides that failure. Use when handling invalid parameters, failed solves, infinities, clamps, floors, or numerical thresholds."
+license: MIT
 disable-model-invocation: true
 ---
 

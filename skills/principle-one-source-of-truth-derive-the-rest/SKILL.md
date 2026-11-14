@@ -1,6 +1,7 @@
 ---
 name: principle-one-source-of-truth-derive-the-rest
-description: "Use when implementing related values, derivatives, or inverse maps that could drift apart."
+description: "Derive related production values, derivatives, and inverse maps from one authoritative primitive so they cannot drift. Use when implementing a quantity together with its derivative, Jacobian, gradient, or inverse."
+license: MIT
 disable-model-invocation: true
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: mutation-testing
-description: "Use when passing numerical tests leave doubt that plausible regressions would be detected."
+description: "Check whether numerical tests would catch a plausible bug: mutate one behavior, rerun, and separate real survivors from equivalent mutants. Use when tests pass but might miss a regression, a loosened tolerance, a weakened assertion, or an untested branch."
+license: MIT
 ---
 
 # Mutation Testing

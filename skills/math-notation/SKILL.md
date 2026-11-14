@@ -1,6 +1,7 @@
 ---
 name: math-notation
-description: "Use when finalizing notation in mathematical writing: audit symbols, case reductions, and notation after transformations while preserving the full claim. Not for scratch work or unfinished derivations."
+description: "Audit final-draft mathematical notation: which symbols earn a definition, which cases reduce without loss of generality, and which symbols to keep after a transformation. Use when finalizing symbols, a WLOG reduction, or notation after a change of variables in a paper, proof, or derivation. Not for scratch work or unfinished derivations."
+license: MIT
 ---
 
 # Math notation
