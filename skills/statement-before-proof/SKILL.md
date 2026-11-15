@@ -8,7 +8,7 @@ license: MIT
 
 Before proving or deriving a mathematical claim, state it as a numbered or named **Theorem**, **Proposition**, **Lemma**, or **Corollary**. Do not bury the claim inside the proof narrative.
 
-Apply this rule even when the claim comes from a source such as a book section and the page supplies its proof or derivation. Pure definitions and informal motivation do not need result labels. Clearly mark results cited without proof as cited and identify their source; do not imply that the page proves them.
+Apply this rule even when the claim comes from a source such as a book section and the page supplies its proof or derivation. Pure definitions and informal motivation do not need result labels.
 
 ## Choose the result type
 
