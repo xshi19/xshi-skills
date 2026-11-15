@@ -60,7 +60,9 @@ Keep project skills in `.agents/skills`. Cloud Agent sync copies `~/.cursor/skil
 
 Same prompt, two fresh Cursor sessions: derive the conditional distribution of a partitioned multivariate normal. Without skills, the claim is a closing Result, and the precision matrix $\Lambda$ stays in the derivation. With the skills installed under `.agents/skills`, Theorem 1 is stated before its proof, the coefficient $C$ stays inside the proof, and the singular case is a remark after it. That report is longer (263 lines against 167). Verbatim files: [`examples/math-report`](examples/math-report/).
 
-![Without skill and with the skills installed](docs/assets/math-report-before-after.png)
+![Both full reports at the same scale, 167 lines and 263 lines](docs/assets/math-report-full-side-by-side.png)
+
+![Claim placement, symbol counts, assumptions, and length](docs/assets/math-report-differences.png)
 
 An earlier polish of one passage is in [`examples/math-notation`](examples/math-notation/).
 
@@ -177,7 +179,9 @@ Claude Code 读项目里的 `.claude/skills`，以及用户目录 `~/.claude/ski
 
 同一句提示、两次新的 Cursor 会话：推导分块多元正态的条件分布。没有技能时，结论放在最后的 Result，精度矩阵 $\Lambda$ 出现在推导正文里。技能装在 `.agents/skills` 后，定理 1 写在证明之前，系数 $C$ 只留在证明里，奇异情形放在证明后的注记。这份报告更长（263 行对 167 行）。原文见 [`examples/math-report`](examples/math-report/)。
 
-![没有技能与装上技能](docs/assets/math-report-before-after.png)
+![两份报告全文并排，167 行与 263 行](docs/assets/math-report-full-side-by-side.png)
+
+![结论位置、符号数量、假设与篇幅](docs/assets/math-report-differences.png)
 
 更早的一段润色见 [`examples/math-notation`](examples/math-notation/)。
 

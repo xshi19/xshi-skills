@@ -29,4 +29,16 @@ The difference is not small. Both reach the same classical formula: the conditio
 
 5. **Delimiters.** Run A uses `\(...\)` and `\[...\]`. Run B rewrote those to `$` and `$$` while running `notation_audit.py`, which only sees dollar math. That is a mechanical side effect of the audit, not a change in the mathematics.
 
-The figure in `docs/assets/math-report-before-after.png` shows the precision-matrix passage and the closing Result from Run A beside Theorem 1 and the proof-local \(C\) from Run B. It is a selection. These markdown files are the full reports.
+The figure in `docs/assets/math-report-before-after.png` shows the precision-matrix passage and the closing Result from Run A beside Theorem 1 and the proof-local \(C\) from Run B. It is a selection. `docs/assets/math-report-full-side-by-side.png` renders both files in full at the same size. `docs/assets/math-report-differences.png` is the count card. These markdown files are the full reports.
+
+## Counts
+
+Lines are newline-terminated lines in the raw files: 167 and 263. Words are whitespace-separated tokens in those files, math included: 579 and 2,276.
+
+A symbol counts once, at the sentence that introduces it with Let, write, Define, denoted, or “there exists,” or as the left-hand side of the display that sentence defines. Subscripts 1, 2, 11, 12, 21, 22, \(i\), and \(j\) on that letter count as one symbol. Quantifiers (`for every`) and operators (\(\mathbb{E}\), \(\operatorname{Cov}\), \(\exp\), \(\mathcal{N}\), and so on) are not counted. A symbol is proof-local when that sentence sits between **Proof.** and **End of proof.**
+
+Main line, without skill (10): \(X\), \(\mu\), \(\Sigma\), \(\Lambda\), \(y\), \(f\), \(Q\), \(\mu_{1\mid 2}\), \(\Sigma_{1\mid 2}\), \(Z\).
+
+Main line, with skills (15): \(d\), \(\mu\), \(\Sigma\), \(A\), \(Z\), \(Y\), \(m\), \(c\), \(B\), \(p\), \(q\), \(X\), \(\mu_{1\mid 2}\), \(\Sigma_{1\mid 2}\), \(\Gamma\).
+
+Inside a proof: none, versus \(a\), \(U\), \(V\), \(C\), \(R\).
