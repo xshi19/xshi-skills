@@ -22,7 +22,7 @@ Choose by the result's role, not the length or difficulty of its proof. Use the 
 ## Statement and proof audit
 
 1. Identify each claim established by a proof or formal derivation, including claims adapted from cited sources. Preserve attribution and the source's theorem or section identifier when available.
-2. Write the complete statement first: define its objects and domains, make quantifiers and hypotheses explicit, and give the precise conclusion. Include any regularity, positivity, finiteness, boundary, or unit conditions needed for validity. The reader must be able to interpret the statement without reading its proof.
+2. Write the complete statement first: make quantifiers and hypotheses explicit, and give the precise conclusion. Include any regularity, positivity, finiteness, boundary, or unit conditions needed for validity.
 3. Place the proof after the statement and clearly mark its beginning and end. Check that it establishes exactly the stated claim. Resolve missing assumptions or unsupported conclusions explicitly; do not silently strengthen or weaken the result during restructuring.
 4. Put remarks, examples, unit comments, and out-of-scope notes after the proof. Keep essential hypotheses in the statement and reasoning needed to establish the claim in the proof; neither belongs only in an afterthought.
 5. Reread in order: every proved claim has a preceding numbered or named statement, no hypothesis or part of the conclusion is first revealed in the proof, and labels, citations, and cross-references remain consistent.
