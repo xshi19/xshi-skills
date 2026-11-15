@@ -16,6 +16,8 @@ That is the install. Cursor and Codex both read `.agents/skills`. In Cursor, ope
 
 Call a skill with `/skill-name`, or let the agent choose from the description. The principles and `benchmarking` run only when you name them: `/name` in Cursor and Claude Code, `$name` in Codex.
 
+![One project copy in .agents/skills. Cursor and Codex read that folder. Claude Code uses the same files from .claude/skills.](docs/assets/one-copy-many-agents.svg)
+
 ### install.sh
 
 Optional, from a clone:
@@ -56,20 +58,9 @@ Keep project skills in `.agents/skills`. Cloud Agent sync copies `~/.cursor/skil
 
 ## Why
 
-A final draft often names something the reader uses once. `math-notation` removes that name when a symmetry carries the omitted case. For `|a-b| ≤ |a|+|b|`:
+The same draft, the same request (“Polish this for the final draft.”), two Cursor runs. Without a skill, the extra names go and the standardized sample stays $z_i$. With `math-notation`, the symmetry is stated as without loss of generality, and the standardized sample keeps the name $x_i$. Verbatim replies: [`examples/math-notation`](examples/math-notation/).
 
-```text
-Before
-  Let m = min(a, b) and M = max(a, b).
-  Then |a - b| = M - m ≤ |a| + |b|.
-
-After
-  Without loss of generality, assume a ≤ b, since swapping a and b
-  preserves the domain and the inequality. It remains to show
-  b - a ≤ |a| + |b|.
-```
-
-**TODO image:** a Cursor before/after screenshot of this edit.
+![Without skill and with math-notation](docs/assets/math-notation-before-after.png)
 
 ## Skills
 
@@ -141,6 +132,8 @@ Invoke-only skills set `disable-model-invocation: true` and `agents/openai.yaml`
 
 用 `/技能名` 调用，或让 agent 按描述自己选。七条原则和 `benchmarking` 只有被点名才运行：Cursor 和 Claude Code 用 `/名称`，Codex 用 `$名称`。
 
+![项目里的一份 .agents/skills。Cursor 和 Codex 直接读这个目录。Claude Code 从 .claude/skills 使用同一份文件。](docs/assets/one-copy-many-agents.svg)
+
 #### install.sh
 
 可选。克隆后：
@@ -180,19 +173,9 @@ Claude Code 读项目里的 `.claude/skills`，以及用户目录 `~/.claude/ski
 
 ### 为什么
 
-定稿时常会给一个只用一次的量起名字。`math-notation` 会在对称性已经覆盖被省略情形时去掉这个名字。以 `|a-b| ≤ |a|+|b|` 为例：
+同一份草稿、同一句请求（“Polish this for the final draft.”），两次 Cursor 运行。没有技能时，多余的名字被删掉，标准化后的样本仍叫 $z_i$。加载 `math-notation` 后，对称性写成不失一般性，标准化后的样本沿用 $x_i$。原文见 [`examples/math-notation`](examples/math-notation/)。
 
-```text
-改前
-  设 m = min(a, b)，M = max(a, b)。
-  则 |a - b| = M - m ≤ |a| + |b|。
-
-改后
-  不失一般性，设 a ≤ b，因为交换 a 与 b 不改变定义域和不等式。
-  剩下要证明 b - a ≤ |a| + |b|。
-```
-
-**待补图片：** 这段修改在 Cursor 里的前后对比截图。
+![Without skill and with math-notation](docs/assets/math-notation-before-after.png)
 
 ### 技能
 

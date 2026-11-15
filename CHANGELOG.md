@@ -8,3 +8,4 @@ Initial public release.
 - Decision records: `decision-records`
 - Numerical work: seven `principle-*` skills, plus `benchmarking`, `mutation-testing`, and `numerical-review`
 - `install.sh` symlinks skills into `.agents/skills`, lists them, and removes symlinks it created
+- A side-by-side from two Cursor runs of `math-notation`, and a diagram of the shared skills directory
