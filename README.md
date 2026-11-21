@@ -2,7 +2,7 @@
 
 English | [中文](#中文)
 
-Agent skills for math writing and scientific computing (math notation, decision records, numerical principles and review, benchmarking, and mutation testing), written by [Xiang Shi](https://github.com/xshi19), who uses them daily for papers and numerical code.
+Agent skills for math writing and scientific computing (proofs, decision records, numerical principles and review, benchmarking, and mutation testing), written by [Xiang Shi](https://github.com/xshi19), who uses them daily for papers and numerical code.
 
 Each skill is a folder with a `SKILL.md` in the open [Agent Skills](https://agentskills.io/specification) format. Cursor is the main target. Codex and Claude Code load the same files.
 
@@ -26,9 +26,9 @@ Optional, from a clone:
 git clone https://github.com/xshi19/xshi-skills.git
 cd xshi-skills
 ./install.sh --project /path/to/your/repo
-./install.sh --project /path/to/your/repo math-notation decision-records
+./install.sh --project /path/to/your/repo math-writing decision-records
 ./install.sh --list
-./install.sh --uninstall --project /path/to/your/repo math-notation
+./install.sh --uninstall --project /path/to/your/repo math-writing
 ```
 
 `--project` symlinks into that repo's `.agents/skills`, and into `.claude/skills` when `.claude` is already there. Without `--project`, it symlinks into `~/.agents/skills` (created when `~/.cursor` or `~/.codex` exists) and into `~/.claude/skills` when that directory already exists. `--copy` copies instead of linking. `--uninstall` removes symlinks made from this clone and leaves copied directories in place. `./install.sh --help` prints the rest.
@@ -37,7 +37,7 @@ cd xshi-skills
 
 ```bash
 mkdir -p .agents/skills
-cp -R /path/to/xshi-skills/skills/math-notation .agents/skills/
+cp -R /path/to/xshi-skills/skills/math-writing .agents/skills/
 ```
 
 A symlink (`ln -s`) stays current when you `git pull` the clone.
@@ -50,21 +50,11 @@ This layout works with the [skills CLI](https://github.com/vercel-labs/skills) (
 npx skills add xshi19/xshi-skills
 ```
 
-It finds `skills/<name>/SKILL.md` and copies the skills you pick into `.agents/skills`. Add `--skill math-notation -a cursor` to skip the prompts.
+It finds `skills/<name>/SKILL.md` and copies the skills you pick into `.agents/skills`. Add `--skill math-writing -a cursor` to skip the prompts.
 
 Claude Code reads `.claude/skills` in the project and `~/.claude/skills` for the user. Locations: [Cursor](https://cursor.com/docs/skills), [Codex](https://learn.chatgpt.com/docs/build-skills), [Claude Code](https://code.claude.com/docs/en/skills).
 
 Keep project skills in `.agents/skills`. Cloud Agent sync copies `~/.cursor/skills` only. Automations read `.cursor/skills` in the repository.
-
-## Why
-
-Same prompt, two fresh Cursor sessions: derive the conditional distribution of a partitioned multivariate normal. Without skills, the claim is a closing Result, and the precision matrix $\Lambda$ stays in the derivation. With the skills installed under `.agents/skills`, Theorem 1 is stated before its proof, the coefficient $C$ stays inside the proof, and the singular case is a remark after it. That report is longer (263 lines against 167). Verbatim files: [`examples/math-report`](examples/math-report/).
-
-![Both full reports at the same scale, 167 lines and 263 lines](docs/assets/math-report-full-side-by-side.png)
-
-![Claim placement, symbol counts, assumptions, and length](docs/assets/math-report-differences.png)
-
-An earlier polish of one passage is in [`examples/math-notation`](examples/math-notation/).
 
 ## Skills
 
@@ -72,8 +62,7 @@ An earlier polish of one passage is in [`examples/math-notation`](examples/math-
 
 | Skill | What it does | When it triggers |
 |---|---|---|
-| [`math-notation`](skills/math-notation/SKILL.md) | Audits a final draft for symbols that earn a name, case reductions, and notation after a transformation. Report-only [audit script](skills/math-notation/scripts/notation_audit.py) (Python 3, stdlib). | Finalizing symbols, a without-loss-of-generality step, or a change of variables. Not scratch work. |
-| [`statement-before-proof`](skills/statement-before-proof/SKILL.md) | States a numbered or named theorem, proposition, lemma, or corollary before its proof, and puts remarks after. | Drafting or reviewing a proof, a formal derivation, or a cited result proved on the page. |
+| [`math-writing`](skills/math-writing/SKILL.md) | States what is to be proved, in formulas, before the proof. | Writing or finalizing a proof, derivation, or math page. |
 
 ### Decision records
 
@@ -122,7 +111,7 @@ Invoke-only skills set `disable-model-invocation: true` and `agents/openai.yaml`
 
 ## 中文
 
-面向数学写作和科学计算的 Agent Skills（数学记号、决策记录、数值原则与审查、基准测试、变异测试）。作者 [Xiang Shi](https://github.com/xshi19) 写论文和数值代码时每天在用。
+面向数学写作和科学计算的 Agent Skills（证明、决策记录、数值原则与审查、基准测试、变异测试）。作者 [Xiang Shi](https://github.com/xshi19) 写论文和数值代码时每天在用。
 
 每个技能是一个带 `SKILL.md` 的目录，遵循开放的 [Agent Skills](https://agentskills.io/specification) 格式。主要给 Cursor 用。Codex 和 Claude Code 加载同一份文件。
 
@@ -147,7 +136,7 @@ git clone https://github.com/xshi19/xshi-skills.git
 cd xshi-skills
 ./install.sh --project /path/to/your/repo
 ./install.sh --list
-./install.sh --uninstall --project /path/to/your/repo math-notation
+./install.sh --uninstall --project /path/to/your/repo math-writing
 ```
 
 `--project` 把符号链接放进该仓库的 `.agents/skills`；若已有 `.claude` 目录，也会放进 `.claude/skills`。不带 `--project` 时，放进 `~/.agents/skills`（本机已有 `~/.cursor` 或 `~/.codex` 时会创建），若 `~/.claude/skills` 已存在也会放一份。`--copy` 改为复制。`--uninstall` 只删除指向这份克隆的符号链接，复制出来的目录会留下。其余见 `./install.sh --help`。
@@ -156,7 +145,7 @@ cd xshi-skills
 
 ```bash
 mkdir -p .agents/skills
-cp -R /path/to/xshi-skills/skills/math-notation .agents/skills/
+cp -R /path/to/xshi-skills/skills/math-writing .agents/skills/
 ```
 
 用 `ln -s` 的话，克隆仓库 `git pull` 之后链接仍然指向最新内容。
@@ -169,21 +158,11 @@ cp -R /path/to/xshi-skills/skills/math-notation .agents/skills/
 npx skills add xshi19/xshi-skills
 ```
 
-它把选中的技能复制到项目的 `.agents/skills`。加上 `--skill math-notation -a cursor` 可以跳过提问。
+它把选中的技能复制到项目的 `.agents/skills`。加上 `--skill math-writing -a cursor` 可以跳过提问。
 
 Claude Code 读项目里的 `.claude/skills`，以及用户目录 `~/.claude/skills`。
 
 项目里的技能放在 `.agents/skills`。Cloud Agent 同步只复制 `~/.cursor/skills`。自动化任务读仓库里的 `.cursor/skills`。
-
-### 为什么
-
-同一句提示、两次新的 Cursor 会话：推导分块多元正态的条件分布。没有技能时，结论放在最后的 Result，精度矩阵 $\Lambda$ 出现在推导正文里。技能装在 `.agents/skills` 后，定理 1 写在证明之前，系数 $C$ 只留在证明里，奇异情形放在证明后的注记。这份报告更长（263 行对 167 行）。原文见 [`examples/math-report`](examples/math-report/)。
-
-![两份报告全文并排，167 行与 263 行](docs/assets/math-report-full-side-by-side.png)
-
-![结论位置、符号数量、假设与篇幅](docs/assets/math-report-differences.png)
-
-更早的一段润色见 [`examples/math-notation`](examples/math-notation/)。
 
 ### 技能
 
@@ -191,8 +170,7 @@ Claude Code 读项目里的 `.claude/skills`，以及用户目录 `~/.claude/ski
 
 | 技能 | 做什么 | 何时触发 |
 |---|---|---|
-| [`math-notation`](skills/math-notation/SKILL.md) | 审查定稿：符号是否值得单独命名、情形能否不失一般性地归约、变换后是否沿用原符号。附只报告、不改文件的 [审查脚本](skills/math-notation/scripts/notation_audit.py)。 | 定稿论文或证明里的符号、不失一般性、换元之后的记号。不是草稿。 |
-| [`statement-before-proof`](skills/statement-before-proof/SKILL.md) | 在证明之前写出编号或命名的定理、命题、引理或推论，评注放在证明之后。 | 起草或审查证明、形式推导，或页面上给出证明的引用结果。 |
+| [`math-writing`](skills/math-writing/SKILL.md) | 先用公式写出要证明的内容，再给证明。 | 写证明、推导或数学页面，或定稿时。 |
 
 #### 决策记录
 
