@@ -1,6 +1,7 @@
 ---
 name: numerical-review
-description: "Use when reviewing numerical formulas, derivative rules, iterative solvers, or execution-contract changes."
+description: "Review numerical code against its derivation: cancellation, derivatives, solver failure, oracle error, and changes to the execution contract. Use when reviewing a formula, a gradient or Jacobian, an iterative solver, a tolerance, or a move onto JIT or GPU execution."
+license: MIT
 ---
 
 # Numerical Review

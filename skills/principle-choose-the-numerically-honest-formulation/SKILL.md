@@ -1,6 +1,7 @@
 ---
 name: principle-choose-the-numerically-honest-formulation
-description: "Use when choosing formulations, representations, and precision for numerical code."
+description: "Choose the formulation, representation, and precision so useful digits survive, including log-space densities, factorizations in place of explicit inverses, and stable forms at extreme arguments. Use when choosing a formula, a representation, a dtype, or a precision for numerical code."
+license: MIT
 disable-model-invocation: true
 ---
 

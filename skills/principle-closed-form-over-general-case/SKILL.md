@@ -1,6 +1,7 @@
 ---
 name: principle-closed-form-over-general-case
-description: "Use when choosing a specialized formula or considering deduplication through a general solver."
+description: "Prefer a specialized closed form when it meets the domain and accuracy contract, and adopt a general solver only when its extra failure modes are justified. Use when choosing between a special-case formula and a general algorithm, or when folding a direct formula into a solver."
+license: MIT
 disable-model-invocation: true
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: decision-records
-description: "Use when recording consequential choices or inconclusive alternatives, or recovering prior authority before proposing design changes."
+description: "Record an architecture decision: the choice, rejected or inconclusive alternatives, who had authority, and when to reopen it. Also find the record that already governs a design. Use when writing an ADR, preserving an alternative that was not selected, or checking prior decisions before a design change."
+license: MIT
 ---
 
 # Decision Records (ADR)

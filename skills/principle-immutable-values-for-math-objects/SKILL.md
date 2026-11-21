@@ -1,6 +1,7 @@
 ---
 name: principle-immutable-values-for-math-objects
-description: "Use when designing mathematical values, fitting results, or reusable numerical artifacts."
+description: "Represent a mathematical value by fixed parameters, kept separate from fitting progress, random state, and cached numerical artifacts. Use when designing a distribution, a fitted result, a parameter object, or another reusable numerical value."
+license: MIT
 disable-model-invocation: true
 ---
 

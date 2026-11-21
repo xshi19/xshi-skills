@@ -1,6 +1,7 @@
 ---
 name: principle-code-mirrors-the-math
-description: "Use when translating a derivation into code or exposing multiple coordinate systems."
+description: "Keep each implemented quantity traceable to the governing equations, including units, shapes, and coordinate changes. Use when translating a derivation or formula into code, or when the code exposes more than one coordinate system or parametrization."
+license: MIT
 disable-model-invocation: true
 ---
 
