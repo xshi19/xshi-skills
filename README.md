@@ -62,7 +62,7 @@ Keep project skills in `.agents/skills`. Cloud Agent sync copies `~/.cursor/skil
 
 | Skill | What it does | When it triggers |
 |---|---|---|
-| [`math-writing`](skills/math-writing/SKILL.md) | States what is to be proved, in formulas, before the proof. | Writing or finalizing a proof, derivation, or math page. |
+| [`math-writing`](skills/math-writing/SKILL.md) | States everything to be proved in formulas first, explains the decisive step, and names a quantity only when the name is reused or helps a calculation. | Writing or revising mathematical exposition. |
 
 ### Decision records
 
@@ -170,7 +170,7 @@ Claude Code 读项目里的 `.claude/skills`，以及用户目录 `~/.claude/ski
 
 | 技能 | 做什么 | 何时触发 |
 |---|---|---|
-| [`math-writing`](skills/math-writing/SKILL.md) | 先用公式写出要证明的内容，再给证明。 | 写证明、推导或数学页面，或定稿时。 |
+| [`math-writing`](skills/math-writing/SKILL.md) | 先用公式写出要证明的全部内容，讲清关键一步；名字会再用到或能让计算更好读时才给量起名。 | 写或修改数学文字时。 |
 
 #### 决策记录
 
